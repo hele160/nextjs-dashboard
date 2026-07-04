@@ -18,11 +18,10 @@
         "name": "next"
       }
     ],
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "moduleSuffixes": [".ts", ".tsx", ".js", ".jsx", ""] // ← 添加这一行
   },
   "include": [
     "next-env.d.ts",
@@ -31,7 +30,8 @@
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.ts",
     "scripts/seed.js",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    "types/**/*.d.ts" // ← 如果你创建了 types/globals.d.ts，添加这行
   ],
   "exclude": ["node_modules"]
 }
